@@ -1,0 +1,69 @@
+.App {
+  text-align: center;
+}
+
+.header-font-white {
+  color: white;
+}
+
+#navbar {
+  position: sticky;
+  z-Index: 1003;
+  background-color: #16191f;
+}
+
+/*This CSS hide the signUp tab*/
+.amplify-tabs {
+  display: none;
+}
+
+/* This adjust the SignIn font size */
+:root{
+--amplify-components-fieldcontrol-small-font-size: 1.5rem;
+--amplify-components-button-font-size: 1.5rem;
+--amplify-components-fieldcontrol-font-size: 1.5rem;
+--amplify-components-tabs-item-font-size: 1.5rem;
+}
+
+/* フォームフィールド */
+.form-field {
+  color:black;
+  font-size:16px;
+  margin-top:    10px;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+/* フォームフィールド内の要素 */
+.form-field input,
+.form-fiild radio-button
+.form-field button,
+.form-field Textarea{
+  font-size:16px;
+  margin-top:     2px;
+  margin-bottom:  0px;
+  padding: 2px;
+}
+
+
+
+/* Historyセクション全体 */
+.history-item {
+  font-size: 1.0rem;
+  line-height: 1.0;
+  padding: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+/* ファイル名のスタイル調整 */
+.history-item .file-name {
+  font-size: 1.0rem;
+  font-weight: bold;
+}
+
+/* ファイル形式とサイズ */
+.history-item .file-info {
+  font-size: 0.9rem;
+}

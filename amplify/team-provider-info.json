@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-s3uploadcognitoemail-dev-73544-authRole",
+      "UnauthRoleArn": "arn:aws:iam::053423220213:role/amplify-s3uploadcognitoemail-dev-73544-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::053423220213:role/amplify-s3uploadcognitoemail-dev-73544-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-s3uploadcognitoemail-dev-73544-deployment",
+      "UnauthRoleName": "amplify-s3uploadcognitoemail-dev-73544-unauthRole",
+      "StackName": "amplify-s3uploadcognitoemail-dev-73544",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:053423220213:stack/amplify-s3uploadcognitoemail-dev-73544/b4931880-2ed7-11ef-8e63-0a94d1403c19",
+      "AmplifyAppId": "d3io949m7y1n3a"
+    },
+    "categories": {
+      "auth": {
+        "s3uploadcognitoemail76241edd": {}
+      },
+      "storage": {
+        "s3cognitoemail": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 // Program Name: labels/navigationLabels.js
 // Author: SHIMA Masahiro
 // Creation      Date: 2024-04-04
-// Last Modified Date: 2024-06-04
+// Last Modified Date: 2024-06-26
 
 const navigationLabels = {
 
@@ -13,7 +13,6 @@ const navigationLabels = {
         title: "動画 文字起こし・要約",
         headerText: "動画ファイルから音声を文字起こし、100字以内に要約してタイトル案を生成します。"
     },
-
     Caption: {
         title: "動画 字幕データ",
         headerText: "動画ファイルから字幕データ(WebVTT)を生成します。"
@@ -22,13 +21,10 @@ const navigationLabels = {
         title: "テキスト 翻訳",
         headerText: "テキストファイルの内容を翻訳します。（日本語→英語 英語→日本語）"
     },
-
     Summarize: {
         title: "テキスト 要約",
         headerText: "テキストファイルの内容を100字以内に要約してタイトル案を生成します。"
     },
-
-
     EMC_HLS: {
         title: "動画 配信",
         headerText: "動画ファイルからプレビューのURLとHTMLタグを生成します。"
@@ -37,12 +33,10 @@ const navigationLabels = {
         title: "動画 音声変換",
         headerText: "動画ファイルを音声ファイル(mp3)に変換します。"
     },
-
     PDFtoText_Summarize: {
         title: "PDF テキスト抽出・要約",
         headerText: "PDFファイルからテキストを抽出し、100字以内に要約してタイトル案を生成します。"
     },
-
     AmazonPolly: {
         title: "テキスト 読み上げ",
         headerText: "テキストファイルの内容を読み上げて音声ファイルを生成します。"
@@ -57,7 +51,7 @@ const navigationLabels = {
     },
     Multimodal_AI: {
         title: "テスト　Multimodal_AI",
-        headerText: "Multimodal_AIのテスト"
+        headerText: "テスト　Multimodal"
     },
 };
 

@@ -1,16 +1,15 @@
 // Program Name: Translate.js
 // Author: SHIMA Masahiro
 // Creation      Date: 2024-03-07
-// Last Modified Date: 2024-06-14
+// Last Modified Date: 2024-06-26
 
 import React, { useState, useEffect } from 'react';
 import '@aws-amplify/ui-react/styles.css';
 import './App.css';
 import { Auth, Storage } from 'aws-amplify';
 import { ContentLayout,SpaceBetween} from "@cloudscape-design/components";
-import { ContentHeader,ContainerHeader,ErrorAlert,InputEmail,SelectTranslate,InputFile,UploadList,UploadButton,HistoryList} from './components';
+import { ContentHeader,ContainerHeader,ErrorAlert,SelectTranslate,InputFile,UploadList,UploadButton,HistoryList} from './components';
 import CommonLayout from './components/CommonLayout';
-import { useEmail } from './hooks/useEmail';
 import { useFileUploadManagement } from './hooks/useFileUploadManagement';
 import { handleUploadClick } from './utils/handleUploadClick';
 import { handleFileChange } from './utils/handleFileChange';
@@ -25,8 +24,7 @@ const Content = () => {
     const [translate, setTranslate] = useState('AmazonTranslate');
     const [caption, setCaption] = useState('');
     const [visibleAlert, setVisibleAlert] = useState(false);
-    const [errors, setErrors] = useState({ email: '', upload: '', task: '' });
-    const [email, handleEmailChange] = useEmail(); 
+    const [errors, setErrors] = useState({ upload: '', task: '' });
     const { uploadList, historyList, addFilesToUpload, removeFileById, updateFileInHistory, finalizeUpload } = useFileUploadManagement();
 
     const task = 'Translate';
@@ -51,7 +49,6 @@ const Content = () => {
         handleUploadClick(
             task,
             taskDetails,
-            email,
             uploadList,
             setErrors,
             setVisibleAlert,
@@ -64,8 +61,7 @@ const Content = () => {
         <ContentLayout header={<ContentHeader title={navigationLabels.Translate.title} />}>
             <SpaceBetween size="xs">
                 <ContainerHeader headerText={navigationLabels.Translate.headerText}>
-                    <ErrorAlert errors={errors} onDismiss={() => setErrors({ email: '', upload: '', task: '' })}/>
-                    <InputEmail email={email} onChange={handleEmailChange} />
+                    <ErrorAlert errors={errors} onDismiss={() => setErrors({ upload: '', task: '' })}/>
                     <SelectTranslate translate={translate} setTranslate={setTranslate} showNoneOption={false} />
                     <InputFile accept=".txt" label="テキストファイル" description="ファイルを選択してください。（.txt）" onFileSelect={(e) => handleFileChange(e, addFilesToUpload)} />
                     <UploadList items={uploadList} onDismiss={removeFileByIndex} />

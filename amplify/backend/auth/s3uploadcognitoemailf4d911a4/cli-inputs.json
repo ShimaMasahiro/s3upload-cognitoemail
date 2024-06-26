@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "s3uploadcognitoemail76241edd_identitypool_76241edd",
-    "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "s3uplo76241edd",
-    "userPoolName": "s3uploadcognitoemail76241edd_userpool_76241edd",
+    "identityPoolName": "s3uploadcognitoemailf4d911a4_identitypool_f4d911a4",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "s3uplof4d911a4",
+    "userPoolName": "s3uploadcognitoemailf4d911a4_userpool_f4d911a4",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -31,33 +31,18 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "s3uplo76241edd_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "s3uplof4d911a4_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "76241edd",
-    "resourceName": "s3uploadcognitoemail76241edd",
+    "sharedId": "f4d911a4",
+    "resourceName": "s3uploadcognitoemailf4d911a4",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "default",
     "usernameAttributes": [
       "email"
     ],
-    "triggers": {},
     "userPoolGroupList": [],
     "serviceName": "Cognito",
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true,
-    "authRoleArn": {
-      "Fn::GetAtt": [
-        "AuthRole",
-        "Arn"
-      ]
-    },
-    "unauthRoleArn": {
-      "Fn::GetAtt": [
-        "UnauthRole",
-        "Arn"
-      ]
-    },
-    "breakCircularDependency": true,
-    "dependsOn": []
+    "useEnabledMfas": true
   }
 }

@@ -1,7 +1,7 @@
 // Program Name: HistoryList.js
 // Author: SHIMA Masahiro
 // Creation      Date: 2024-01-26
-// Last Modified Date: 2024-04-06
+// Last Modified Date: 2024-06-26
 
 /**
  * ヒストリーリストを表示する
@@ -37,6 +37,7 @@ const HistoryList = ({ historyList }) => {
                             resultText={
                                 <React.Fragment>
                                     ファイルのアップロードに成功しました。
+                                    処理完了後、ログインアカウントにメールが送信されます。
                                 </React.Fragment>
                             }
                         />

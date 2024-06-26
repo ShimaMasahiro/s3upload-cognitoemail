@@ -1,7 +1,7 @@
 // Program Name: /utils/handleUpload.js
 // Author: SHIMA Masahiro
 // Creation      Date: 2024-03-29
-// Last Modified Date: 2024-05-29
+// Last Modified Date: 2024-06-26
 
 // ファイルをアップロードし、進捗状況を更新する。
 /** 
@@ -26,7 +26,6 @@ import { Auth, Storage } from 'aws-amplify';
 export const handleUpload = async (
   taskName,
   taskDetails,
-  email,
   uploadList,
   setErrors,
   setVisibleAlert,
@@ -36,7 +35,8 @@ export const handleUpload = async (
   const startTime = Date.now();
 
   const currentUser = await Auth.currentAuthenticatedUser();
-  const username = currentUser.username;
+  const username = currentUser.attributes.email; 
+  const email = currentUser.attributes.email;
 
   const uploadPromises = uploadList.map(async (fileItem) => {
     const file = fileItem.file;

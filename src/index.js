@@ -11,7 +11,6 @@ import awsconfig from './aws-exports';
 import './index.css';
 import App from './App';
 
-// AWS Amplify の設定を適用
 Amplify.configure(awsconfig);
 
 ReactDOM.render(

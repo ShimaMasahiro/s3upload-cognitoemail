@@ -1,7 +1,7 @@
 // Program Name: /utils/handleUploadClick.js
 // Author: SHIMA Masahiro
 // Creation Date: 2024-03-29
-// Last Modified Date: 2024-05-29
+// Last Modified Date: 2024-06-26
 
 /**
  * ユーザーがアップロードボタンをクリックしたときに実行される。
@@ -17,30 +17,28 @@
  */
 
 import { handleUpload } from './handleUpload';
-import { validateForm } from './validation';  // これを追加
+import { validateForm } from './validation';
 
 export const handleUploadClick = async (
     taskName,
     taskDetails,
-    email,
     uploadList,
     setErrors,
     setVisibleAlert,
     updateFileHistory,
     clearFiles,
 ) => {
-    const errors = validateForm(email, uploadList);  // これを追加
+    const errors = validateForm(uploadList);
 
-    if (Object.keys(errors).length > 0) {  // これを追加
-        setErrors(errors);  // これを追加
-        setVisibleAlert(true);  // これを追加
-        return;  // これを追加
+    if (Object.keys(errors).length > 0) {
+        setErrors(errors);
+        setVisibleAlert(true);
+        return; 
     }
 
     await handleUpload(
         taskName,
         taskDetails,
-        email,
         uploadList,
         setErrors,
         setVisibleAlert,

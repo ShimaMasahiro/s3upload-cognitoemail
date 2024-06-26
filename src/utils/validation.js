@@ -1,7 +1,7 @@
 // Program Name: validation.js
 // Author: SHIMA Masahiro
 // Creation      Date: 2024-03-14
-// Last Modified Date: 2024-03-14
+// Last Modified Date: 2024-06-26
 
 // フォームデータのバリデーションを行う関数
 /**
@@ -14,17 +14,18 @@
  * アップロードリストが空の場合、エラーメッセージを設定する。
  * 各項目に対して検証を行い、エラーがある場合はエラーオブジェクトに追加する。
  */
- 
-import { validateEmail } from './utils';
 
-export const validateForm = (email, uploadList) => {
+//import { validateEmail } from './utils';
+
+//export const validateForm = (email, uploadList) => {
+export const validateForm = (uploadList) => {
   let errors = {};
 
-  if (!email.trim()) {
-    errors.email = "メールアドレスを入力してください。";
-  } else if (!validateEmail(email)) {
-    errors.email = "無効なメールアドレスです。正しいメールアドレスを入力してください。";
-  }
+  //if (!email.trim()) {
+  //  errors.email = "メールアドレスを入力してください。";
+  //} else if (!validateEmail(email)) {
+  //  errors.email = "無効なメールアドレスです。正しいメールアドレスを入力してください。";
+  //}
 
   if (uploadList.length === 0) {
     errors.upload = 'ファイルを選択してください。';

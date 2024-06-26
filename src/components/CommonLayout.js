@@ -18,7 +18,8 @@ import ServiceNavigation from './ServiceNavigation';
  * @param {Function} props.onNavigationChange ナビゲーションの開閉状態を変更するハンドラ
  * @param {Object} props.ariaLabels アクセシビリティラベル
  */
-const CommonLayout = ({ children, navigationOpen, onNavigationChange, ariaLabels }) => (
+
+const CommonLayout = ({ children }) => (
   <Authenticator>
     {({ signOut, user }) => (
       <>
@@ -29,11 +30,7 @@ const CommonLayout = ({ children, navigationOpen, onNavigationChange, ariaLabels
         }} />
         <AppLayout
           content={children}
-          headerSelector='#navbar'
           navigation={<ServiceNavigation />}
-          navigationOpen={navigationOpen}
-          onNavigationChange={onNavigationChange}
-          ariaLabels={ariaLabels}
         />
       </>
     )}

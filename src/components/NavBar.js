@@ -17,8 +17,10 @@ const NavBar = ({ user, navbarItemClick }) => {
         utilities={[
             {
                 type: "menu-dropdown",
-                text: user.username,
-                description: user.username,
+                //text: user.username,
+                //description: user.username,
+                text: user.attributes ? user.attributes.email : user.username,
+                description: user.attributes ? user.attributes.email : user.username,
                 iconName: "user-profile",
                 onItemClick: navbarItemClick,
                 items: [

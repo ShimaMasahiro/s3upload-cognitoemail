@@ -12,14 +12,14 @@
       "AmplifyAppId": "d3io949m7y1n3a"
     },
     "categories": {
-      "auth": {
-        "s3uploadcognitoemail76241edd": {}
-      },
       "storage": {
         "s3cognitoemail": {}
       },
       "hosting": {
         "S3AndCloudFront": {}
+      },
+      "auth": {
+        "s3uploadcognitoemailf4d911a4": {}
       }
     }
   }

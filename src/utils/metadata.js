@@ -18,7 +18,7 @@ export const createUploadMetadata = (username, email, task, taskDetails, file) =
     username: username,
     email: email,
     task: task,
-    taskDetails: taskDetails, // 既に文字列化されているためそのまま使用
+    taskDetails: taskDetails, // 既に文字列化
     fileSize: file.size.toString(),
   };
 };

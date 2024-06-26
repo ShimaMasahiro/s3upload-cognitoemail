@@ -35,10 +35,8 @@ export function loadMetadata(file) {
             // const duration = media.duration;
             // 再生時間をフォーマット
             // let formattedDuration = formatDuration(duration);
-
             // 解像度を取得
             // const resolution = `${media.videoWidth}x${media.videoHeight}`;
-
             // 読み込みの成功を通知し、結果を解決
             resolve({
                 //playbackDuration: formattedDuration, // 再生時間（動画の場合のみ）

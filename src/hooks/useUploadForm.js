@@ -1,7 +1,7 @@
 // Program Name: hooks/useUploadForm.js
 // Author: SHIMA Masahiro
 // Creation      Date: 2024-03-14
-// Last Modified Date: 2024-03-14
+// Last Modified Date: 2024-06-26
 
 /**
  * アップロードフォームの状態管理を行う
@@ -20,25 +20,26 @@ import { useState } from 'react';
 import { validateForm } from '../utils/validation';
 
 const useUploadForm = (initialEmail, initialUploadList, handleUpload) => {
-    const [email, setEmail] = useState(initialEmail);
     const [uploadList, setUploadList] = useState(initialUploadList);
     const [errors, setErrors] = useState({});
     const [visibleAlert, setVisibleAlert] = useState(false);
 
   const processFormAndUpload = () => {
-    const newErrors = validateForm(email, uploadList);
+    const newErrors = validateForm(uploadList);
+
     setErrors(newErrors);
     setVisibleAlert(Object.keys(newErrors).length > 0);
     if (Object.keys(newErrors).length === 0) {
         handleUpload();
     }
   };
-  return { email, setEmail, uploadList, setUploadList, errors, visibleAlert, handleUploadClick };
+  return { uploadList, setUploadList, errors, visibleAlert, handleUploadClick };
+}
+    
 };
 
 const handleUploadClick = async (
     taskName,
-    email,
     uploadList,
     setErrors,
     setVisibleAlert,
@@ -52,7 +53,6 @@ const handleUploadClick = async (
     if (Object.keys(newErrors).length === 0) {
         const uploadSuccess = await handleUpload(
             taskName,
-            email,
             uploadList,
             updateFileInHistory
         );

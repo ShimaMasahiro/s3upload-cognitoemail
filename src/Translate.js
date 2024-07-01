@@ -25,7 +25,7 @@ const Content = () => {
     const [caption, setCaption] = useState('');
     const [visibleAlert, setVisibleAlert] = useState(false);
     const [errors, setErrors] = useState({ upload: '', task: '' });
-    const { uploadList, historyList, addFilesToUpload, removeFileById, updateFileInHistory, finalizeUpload } = useFileUploadManagement();
+    const {uploadList, historyList, addFilesToUpload, removeFileById, updateFileInHistory, finalizeUpload } = useFileUploadManagement();
 
     const task = 'Translate';
         

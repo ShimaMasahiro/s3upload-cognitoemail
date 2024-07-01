@@ -8,7 +8,7 @@
 
 #navbar {
   position: sticky;
-  z-index: 1003;
+  z-Index: 1003;
   background-color: #16191f;
 }
 
@@ -22,14 +22,15 @@
 :root{
 --amplify-components-fieldcontrol-small-font-size: 1.5rem;
 --amplify-components-button-font-size: 1.5rem;
---amplify-components-fieldcontrol-font-size: 3.0rem;
+--amplify-components-fieldcontrol-font-size: 1.5rem;
 --amplify-components-tabs-item-font-size: 1.5rem;
 }
 
 /* フォームフィールド */
 .form-field {
   color:black;
-  font-size:16px;
+  font-size: 2.0rem;
+  font-size: 16px;
   margin-top:   10px;
   margin-bottom: 0px;
   padding: 0px;
@@ -37,9 +38,9 @@
 
 /* フォームフィールド内の要素 */
 .form-field input,
-.form-field .radio-button input,
+.form-field radio-button
 .form-field button,
-.form-field textarea {
+.form-field Textarea{
   font-size:16px;
   margin-top:     2px;
   margin-bottom:  0px;

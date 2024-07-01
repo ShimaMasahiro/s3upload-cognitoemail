@@ -1,18 +1,19 @@
-// Program Name: NavBar.js
+// Program Name: TopNavi.js
 // Author: SHIMA Masahiro
 // Creation      Date: 2024-02-29
-// Last Modified Date: 2024-03-07
+// Last Modified Date: 2024-06-28
 
 import React from 'react';
 import { TopNavigation } from "@cloudscape-design/components";
 
-const NavBar = ({ user, navbarItemClick }) => {
+const TopNavi = ({ user, navbarItemClick }) => {
   return (
-    <div id="navbar" style={{fontSize: 'body-l !important', position: 'sticky', top: 0, zIndex: 1002}}>
+    <div id="navbar" 
+      style={{fontSize: 'body-l !important', position: 'sticky', top: 0, zIndex: 1002}}>
       <TopNavigation
         identity={{
             href: "#",
-            title: "業務支援サービス using generative AI",
+            title: "デジタル業務支援サービス    Using Generative AI",
         }}
         utilities={[
             {
@@ -38,4 +39,4 @@ const NavBar = ({ user, navbarItemClick }) => {
   );
 };
 
-export default NavBar;
+export default TopNavi;

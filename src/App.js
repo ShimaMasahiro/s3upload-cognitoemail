@@ -25,7 +25,6 @@ function App() {
             <Route path="/" element={<Transcription_Proofreading />} />
 
             <Route path="/VideoAnalysys" element={<VideoAnalysys />} />
-
             <Route path="/Transcription_Proofreading" element={<Transcription_Proofreading />} />
             <Route path="/Summarize" element={<Summarize />} />
             <Route path="/Translate" element={<Translate />} />

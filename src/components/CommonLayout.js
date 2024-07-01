@@ -1,13 +1,17 @@
 // Program Name: src/components/CommonLayout.js
 // Author: SHIMA Masahiro
 // Creation      Date: 2024-03-28
-// Last Modified Date: 2024-03-28
+// Last Modified Date: 2024-06-27
 
 import React from 'react';
 import { Authenticator } from '@aws-amplify/ui-react';
 import { AppLayout } from "@cloudscape-design/components";
-import NavBar from './NavBar';
+import TopNavi from './TopNavi';
 import ServiceNavigation from './ServiceNavigation';
+import ToolsHelpPanel from './ToolsHelpPanel';
+
+import SplitPanelHeader from './SplitPanelHeader';
+
 
 /**
  * 共通レイアウトコンポーネント
@@ -23,14 +27,19 @@ const CommonLayout = ({ children }) => (
   <Authenticator>
     {({ signOut, user }) => (
       <>
-        <NavBar user={user} navbarItemClick={(e) => {
+        <TopNavi user={user} navbarItemClick={(e) => {
           if (e.detail.id === 'signout') {
             signOut();
           }
         }} />
         <AppLayout
-          content={children}
-          navigation={<ServiceNavigation />}
+          toolsOpen = {false}
+          navigationOpen={true}
+          splitPanelOpen={false}      
+          tools = {<ToolsHelpPanel />}
+          navigation = {<ServiceNavigation />}
+          splitPanel = {<SplitPanelHeader />}
+          content = {children}
         />
       </>
     )}

@@ -41,16 +41,16 @@ const ServiceNavigation = () => {
                 {type: "link", text: navigationLabels.Translate.title, href: "/Translate"},
                 {type: "divider"},
 
+                {type: "link", text: navigationLabels.PDFtoText_Summarize.title, href: "/PDFtoText_Summarize"},
+                {type: "divider"},
+
+{/*
+
                 {type: "link", text: navigationLabels.AmazonPolly.title, href: "/AmazonPolly"},
                 {type: "divider"},
 
                 {type: "link", text: navigationLabels.DALL_E.title, href: "/DALL_E"},
                 {type: "divider"},
-
-                {type: "link", text: navigationLabels.PDFtoText_Summarize.title, href: "/PDFtoText_Summarize"},
-                {type: "divider"},
-
-{/*
 
                 {type: "link", text: navigationLabels.Rekognition.title, href: "/Rekognition"},
                 {type: "divider"},

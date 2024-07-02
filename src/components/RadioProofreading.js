@@ -10,9 +10,9 @@ import RadioGroup from "@cloudscape-design/components/radio-group";
 const RadioProofreading = ({ proofreading, setProofreading, showNoneOption = true }) => {
     const items = [
         showNoneOption && { value: "", label: "しない" },
-        { value: "GPT", label: "GPT-4o" },
-        { value: "Claude", label: "Claude 3.5 Sonnet" },
-        { value: "Gemini", label: "Gemini Pro 1.5" }
+        { value: "GPT", label: "GPT" },
+        { value: "Claude", label: "Claude" },
+        { value: "Gemini", label: "Gemini" }
     ].filter(Boolean); 
 
     return (

@@ -9,9 +9,9 @@ import RadioGroup from "@cloudscape-design/components/radio-group";
 
 const RadioSummarize = ({ summarize, setSummarize }) => {
     const items = [
-        { value: "GPT", label: "GPT-4o" },
-        { value: "Claude", label: "Claude 3.5 Sonnet" },
-        { value: "Gemini", label: "Gemini 1.5 Pro" }
+        { value: "GPT", label: "GPT" },
+        { value: "Claude", label: "Claude" },
+        { value: "Gemini", label: "Gemini" }
     ];
 
     return (

@@ -11,9 +11,9 @@ const RadioTranslate = ({ translate, setTranslate, showNoneOption = true }) => {
     const items = [
         showNoneOption && { value: "", label: "しない" },
         { value: "AmazonTranslate", label: "AmazonTranslate" },
-        { value: "GPT", label: "GPT-4o" },
-        { value: "Claude", label: "Claude 3.5 Sonnet" },
-        { value: "Gemini", label: "Gemini 1.5 Pro" }
+        { value: "GPT", label: "GPT" },
+        { value: "Claude", label: "Claude" },
+        { value: "Gemini", label: "Gemini" }
     ].filter(Boolean);
 
     return (

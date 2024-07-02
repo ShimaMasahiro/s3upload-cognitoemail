@@ -65,7 +65,7 @@ const Content = () => {
 
                     <RadioTranscription transcription={transcription} setTranscription={setTranscription} />
                     <RadioProofreading proofreading={proofreading} setProofreading={setProofreading} showNoneOption={false} />
-                    <InputFile accept=".mp4" label="動画ファイル" description="ファイルを選択してください。（.mp4 .mp3）" onFileSelect={(e) => handleFileChange(e, addFilesToUpload)} />
+                    <InputFile accept=".mp4" label="動画ファイル" description="ファイルを選択してください。（.mp4）" onFileSelect={(e) => handleFileChange(e, addFilesToUpload)} />
                     <UploadList items={uploadList} onDismiss={removeFileByIndex} />
                     <UploadButton label="アップロード" onUpload={uploadAndReset} />
                 </ContainerHeader>

@@ -10,8 +10,8 @@ import RadioGroup from "@cloudscape-design/components/radio-group";
 const RadioCaption = ({ caption, setCaption, showNoneOption = true }) => {
     const items = [
         showNoneOption && { value: "", label: "しない" },
-        { value: "GPT", label: "AmazonTranscribe + GPT-4o" },
-        { value: "Claude", label: "AmazonTranscribe + Claude 3.5 Sonnet" }
+        { value: "GPT", label: "AmazonTranscribe + GPT" },
+        { value: "Claude", label: "AmazonTranscribe + Claude" }
     ].filter(Boolean); // `filter(Boolean)` で undefined を取り除きます
 
     return (

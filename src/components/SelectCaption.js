@@ -1,7 +1,6 @@
 // Program Name: SelectCaption.js
 // Author: SHIMA Masahiro
 // Creation Date: 2024-05-30
-// Last Modified Date: 2024-06-03
 
 import React from 'react';
 import { FormField, SpaceBetween } from "@cloudscape-design/components";
@@ -10,7 +9,7 @@ const SelectCaption = ({ caption, setCaption, showNoneOption = true }) => (
     <FormField 
         className="form-field"
         label="字幕データ"
-        description="字幕データを制作するサービスを選択してください。">
+        description="字幕データを生成するサービスを選択してください。">
         <SpaceBetween direction="horizontal" size="xxl">
             {showNoneOption && (
                 <div className="radio-button">

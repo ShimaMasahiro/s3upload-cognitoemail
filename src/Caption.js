@@ -1,14 +1,14 @@
 // Program Name:Captionn.js
 // Author: SHIMA Masahiro
 // Creation      Date: 2024-03-07
-// Last Modified Date: 2024-06-26
+// Last Modified Date: 2024-07-01
 
 import React, { useState, useEffect } from 'react';
 import '@aws-amplify/ui-react/styles.css';
 import './App.css';
 import { Auth, Storage } from 'aws-amplify';
 import { ContentLayout,SpaceBetween} from "@cloudscape-design/components";
-import { ContentHeader,ContainerHeader,ErrorAlert,SelectCaption,InputFile,UploadList,UploadButton,HistoryList} from './components';
+import { ContentHeader,ContainerHeader,ErrorAlert,RadioCaption,InputFile,UploadList,UploadButton,HistoryList} from './components';
 import CommonLayout from './components/CommonLayout';
 import { useFileUploadManagement } from './hooks/useFileUploadManagement';
 import { handleUploadClick } from './utils/handleUploadClick';
@@ -62,7 +62,7 @@ const Content = () => {
             <SpaceBetween size="xs">
                 <ContainerHeader headerText={navigationLabels.Caption.headerText}>
                     <ErrorAlert errors={errors} onDismiss={() => setErrors({ upload: '', task: '' })}/>
-                    <SelectCaption caption={caption} setCaption={setCaption} showNoneOption={false} />
+                    <RadioCaption caption={caption} setCaption={setCaption} showNoneOption={false} />
                     <InputFile accept=".mp4" label="動画ファイル" description="ファイルを選択してください。（.mp4）" onFileSelect={(e) => handleFileChange(e, addFilesToUpload)} />
                     <UploadList items={uploadList} onDismiss={removeFileByIndex} />
                     <UploadButton label="アップロード" onUpload={uploadAndReset} />

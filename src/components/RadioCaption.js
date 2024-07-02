@@ -11,13 +11,13 @@ const RadioCaption = ({ caption, setCaption, showNoneOption = true }) => {
     const items = [
         showNoneOption && { value: "", label: "しない" },
         { value: "GPT", label: "AmazonTranscribe + GPT-4o" },
-        { value: "Claude", label: "AmazonTranscribe + Claude3 Opus" }
+        { value: "Claude", label: "AmazonTranscribe + Claude 3.5 Sonnet" }
     ].filter(Boolean); // `filter(Boolean)` で undefined を取り除きます
 
     return (
         <FormField 
             className="form-field"
-            label="字幕データ制作"
+            label="字幕データ"
             description="">
             <RadioGroup
                 onChange={({ detail }) => setCaption(detail.value)}

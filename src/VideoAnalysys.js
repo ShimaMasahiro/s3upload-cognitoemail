@@ -1,13 +1,13 @@
 // Program Name: VideoAnalysys.js
 // Author: SHIMA Masahiro
 // Creation      Date: 2024-02-20
-// Last Modified Date: 2024-06-26
+// Last Modified Date: 2024-07-01
 
 import React, { useState, useEffect } from 'react';
 import '@aws-amplify/ui-react/styles.css';
 import './App.css';
 import { ContentLayout, SpaceBetween } from "@cloudscape-design/components";
-import { ContentHeader, ContainerHeader, ErrorAlert,SelectTranscription, SelectProofreading, SelectTranslate, SelectCaption, InputFile, UploadList, UploadButton, HistoryList } from './components';
+import { ContentHeader, ContainerHeader, ErrorAlert,RadioTranscription, RadioProofreading, RadioTranslate, RadioCaption, InputFile, UploadList, UploadButton, HistoryList } from './components';
 import CommonLayout from './components/CommonLayout';
 import { useFileUploadManagement } from './hooks/useFileUploadManagement';
 import { handleUploadClick } from './utils/handleUploadClick';
@@ -62,10 +62,10 @@ const Content = () => {
             <SpaceBetween size="xs">
                 <ContainerHeader headerText={navigationLabels.VideoAnalysys.headerText}>
                     <ErrorAlert errors={errors} onDismiss={() => setErrors({ upload: '', task: '' })} />
-                    <SelectTranscription transcription={transcription} setTranscription={setTranscription} />
-                    <SelectProofreading proofreading={proofreading} setProofreading={setProofreading} showNoneOption={false} />
-                    <SelectTranslate translate={translate} setTranslate={setTranslate} showNoneOption={true} />
-                    <SelectCaption caption={caption} setCaption={setCaption} />
+                    <RadioTranscription transcription={transcription} setTranscription={setTranscription} />
+                    <RadioProofreading proofreading={proofreading} setProofreading={setProofreading} showNoneOption={false} />
+                    <RadioTranslate translate={translate} setTranslate={setTranslate} showNoneOption={true} />
+                    <RadioCaption caption={caption} setCaption={setCaption} />
                     <InputFile accept=".mp4,.mp3" label="動画ファイル" description="ファイルを選択してください。（.mp4 .mp3）" onFileSelect={(e) => handleFileChange(e, addFilesToUpload)} />
                     <UploadList items={uploadList} onDismiss={removeFileByIndex} />
                     <UploadButton label="アップロード" onUpload={uploadAndReset} />

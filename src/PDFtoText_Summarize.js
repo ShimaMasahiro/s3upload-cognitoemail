@@ -1,14 +1,14 @@
 // Program Name: PDFtoText_summarize.js
 // Author: SHIMA Masahiro
 // Creation      Date: 2024-03-07
-// Last Modified Date: 2024-06-26
+// Last Modified Date: 2024-07-01
 
 import React, { useState, useEffect } from 'react';
 import '@aws-amplify/ui-react/styles.css';
 import './App.css';
 import { Auth, Storage } from 'aws-amplify';
 import { ContentLayout,SpaceBetween} from "@cloudscape-design/components";
-import { ContentHeader,ContainerHeader,ErrorAlert,SelectSummarize,InputFile,UploadList,UploadButton,HistoryList} from './components';
+import { ContentHeader,ContainerHeader,ErrorAlert,RadioSummarize,InputFile,UploadList,UploadButton,HistoryList} from './components';
 import CommonLayout from './components/CommonLayout';
 import { useFileUploadManagement } from './hooks/useFileUploadManagement';
 import { handleUploadClick } from './utils/handleUploadClick';
@@ -62,7 +62,7 @@ const Content = () => {
             <SpaceBetween size="xs">
                 <ContainerHeader headerText={navigationLabels.PDFtoText_Summarize.headerText}>
                     <ErrorAlert errors={errors} onDismiss={() => setErrors({ upload: '', task: '' })}/>
-                    <SelectSummarize summarize={summarize} setSummarize={setSummarize} />
+                    <RadioSummarize summarize={summarize} setSummarize={setSummarize} />
                     <InputFile accept=".pdf" label="PDFファイル" description="ファイルを選択してください。（.pdf）" onFileSelect={(e) => handleFileChange(e, addFilesToUpload)} />
                     <UploadList items={uploadList} onDismiss={removeFileByIndex} />
                     <UploadButton label="アップロード" onUpload={uploadAndReset} />

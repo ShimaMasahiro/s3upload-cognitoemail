@@ -11,7 +11,7 @@ const RadioProofreading = ({ proofreading, setProofreading, showNoneOption = tru
     const items = [
         showNoneOption && { value: "", label: "しない" },
         { value: "GPT", label: "GPT-4o" },
-        { value: "Claude", label: "Claude3 Opus" },
+        { value: "Claude", label: "Claude 3.5 Sonnet" },
         { value: "Gemini", label: "Gemini Pro 1.5" }
     ].filter(Boolean); 
 

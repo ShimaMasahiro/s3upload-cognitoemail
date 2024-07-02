@@ -38,7 +38,7 @@ const CommonLayout = ({ children }) => (
           splitPanelOpen={false}      
           tools = {<ToolsHelpPanel />}
           navigation = {<ServiceNavigation />}
-          splitPanel = {<SplitPanelHeader />}
+          /*splitPanel = {<SplitPanelHeader />}*/
           content = {children}
         />
       </>

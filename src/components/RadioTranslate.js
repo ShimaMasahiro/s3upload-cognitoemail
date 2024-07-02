@@ -12,7 +12,7 @@ const RadioTranslate = ({ translate, setTranslate, showNoneOption = true }) => {
         showNoneOption && { value: "", label: "しない" },
         { value: "AmazonTranslate", label: "AmazonTranslate" },
         { value: "GPT", label: "GPT-4o" },
-        { value: "Claude", label: "Claude3 Opus" },
+        { value: "Claude", label: "Claude 3.5 Sonnet" },
         { value: "Gemini", label: "Gemini 1.5 Pro" }
     ].filter(Boolean);
 
